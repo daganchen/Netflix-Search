@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12">
+        <input type="text" id="search" pInputText [(ngModel)]="search" name="search" (ngModelChange)="valueChange($event)" />
+    </div>
+</div>
+<div class="row">
+    <article *ngFor="let movie of movies" class="movie-container col-xs-12 col-sm-4">
+        <div class="article-header">
+            <h1>
+                {{movie.show_title}}
+            </h1>
+        </div>
+        <img src="{{movie.poster}}" alt="">
+        <p>Director: <span>{{movie.director}}</span></p>
+        <p>Show cast: <span>{{movie.show_cast}}</span></p>
+    </article>
+</div>
